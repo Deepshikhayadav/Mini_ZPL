@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminLogin"
+    android:layout_margin="16dp"
+   >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_gravity="end">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="18sp"
+              android:layout_gravity="center_vertical"
+              android:text="Log Out"/>
+          <ImageView
+              android:id="@+id/logout"
+              android:layout_width="40dp"
+              android:layout_gravity="end"
+              android:layout_height="40dp"
+              android:src="@drawable/ic_baseline_person_24" />
+      </LinearLayout>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardCornerRadius="12dp">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <LinearLayout
+                  android:layout_margin="5dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <TextView
+                      android:id="@+id/play"
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="20dp"
+                      android:layout_height="wrap_content"
+                      android:text="Play game"/>
+                  <Spinner
+                      android:id="@+id/spin"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginStart="20dp"
+                      app:layout_constraintBottom_toTopOf="@+id/user"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_margin="5dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="20dp"
+                      android:layout_height="wrap_content"
+                      android:text="Team 1"/>
+                  <Spinner
+                      android:id="@+id/team1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginStart="20dp"
+                      app:layout_constraintBottom_toTopOf="@+id/user"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_margin="5dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <TextView
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="20dp"
+                      android:layout_height="wrap_content"
+                      android:text="Team 2"/>
+                  <Spinner
+                      android:id="@+id/team2"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      android:layout_marginStart="20dp"
+                      app:layout_constraintBottom_toTopOf="@+id/user"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+
+              </LinearLayout>
+              <!-- <EditText
+                   android:id="@+id/user"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="02:00 pm"
+                   android:layout_marginTop="10dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />-->
+              <LinearLayout
+                  android:layout_margin="5dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+                  <ImageView
+                      android:id="@+id/picker"
+                      android:layout_width="40dp"
+                      android:layout_margin="10dp"
+                      android:layout_height="40dp"
+                      android:src="@drawable/ic_baseline_access_time_24"/>
+                  <TextView
+                      android:id="@+id/time"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_vertical"
+                      android:textSize="16sp"
+                      android:layout_margin="10dp"
+                      android:textColor="@color/black"/>
+              </LinearLayout>
+          </LinearLayout>
+      </androidx.cardview.widget.CardView>
+      <Button
+          android:id="@+id/button"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="30dp"
+          android:text="Submit"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/pass" />
+      <TextView
+          android:id="@+id/winner"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Winner teams"
+          android:visibility="gone"
+          android:textSize="18sp"
+          android:textStyle="bold"
+          android:textColor="@color/black"/>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/adminRecycler"
+          tools:listitem="@layout/admin_item"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          android:padding="16dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+      <TextView
+          android:id="@+id/coin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Coin"
+          android:visibility="gone"
+          android:textStyle="bold"
+          android:linksClickable="true"
+          android:layout_marginTop="16dp"
+          android:layout_marginStart="16dp"
+          android:textSize="20sp"/>
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycleCoin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          tools:listitem="@layout/home_recycler"
+          android:layout_margin="10dp"/>
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

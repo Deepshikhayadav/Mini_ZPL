@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    android:layout_marginTop="2dp"
+    app:cardCornerRadius="5dp">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <TextView
+          android:id="@+id/team1"
+          android:layout_width="0dp"
+          android:layout_weight="3"
+          android:layout_height="wrap_content"
+          android:text="mumbai indians"
+          android:gravity="center_horizontal"
+          android:padding="10dp"
+          android:textSize="16sp"/>
+      <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:padding="10dp"
+          android:gravity="center_horizontal"
+          android:layout_height="wrap_content"
+          android:text="VS"/>
+      <TextView
+          android:id="@+id/team2"
+          android:layout_width="0dp"
+          android:layout_weight="3"
+          android:padding="10dp"
+          android:gravity="center_horizontal"
+          android:layout_height="wrap_content"
+          android:text="mumbai indians"
+          android:textSize="16sp"/>
+
+  </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,193 @@
+{
+  "project_info": {
+    "project_number": "629194627662",
+    "firebase_url": "https://quiz-1167e.firebaseio.com",
+    "project_id": "quiz-1167e",
+    "storage_bucket": "quiz-1167e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629194627662:android:3d2758adb6fd906c3b011f",
+        "android_client_info": {
+          "package_name": "com.deepshikhayadav.dojo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5dl1W_LYoikq5EODQNUb7xmFRcU5Ubm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629194627662:android:1c72cb8346c1e43e3b011f",
+        "android_client_info": {
+          "package_name": "com.deepshikhayadav.dojo_shorts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5dl1W_LYoikq5EODQNUb7xmFRcU5Ubm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629194627662:android:016cf3491a7deede3b011f",
+        "android_client_info": {
+          "package_name": "com.deepshikhayadav.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5dl1W_LYoikq5EODQNUb7xmFRcU5Ubm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629194627662:android:3ee40b96e0eda1ed3b011f",
+        "android_client_info": {
+          "package_name": "com.deepshikhayadav.zomato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629194627662-2cnlj4e6qrm55h22m4ei9chbuanr6bj3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deepshikhayadav.zomato",
+            "certificate_hash": "404c26ffe0fb98dded21081e8a0c8723189b8367"
+          }
+        },
+        {
+          "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5dl1W_LYoikq5EODQNUb7xmFRcU5Ubm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629194627662:android:b3942f626d2a630c3b011f",
+        "android_client_info": {
+          "package_name": "com.deepshikhayadav.zomatopremierleague"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5dl1W_LYoikq5EODQNUb7xmFRcU5Ubm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629194627662:android:68e96125eca19e7f3b011f",
+        "android_client_info": {
+          "package_name": "com.example.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5dl1W_LYoikq5EODQNUb7xmFRcU5Ubm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629194627662-0h5cea820l20tk61ih0v3o54c16tubjp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
