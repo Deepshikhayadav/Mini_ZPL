@@ -84,7 +84,6 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
                     Log.d("TAG", "signInWithCredential:success")
                    val user = auth.currentUser
 
@@ -108,7 +107,6 @@ class MainActivity : AppCompatActivity() {
 
 
                 } else {
-                    // If sign in fails, display a message to the user.
                     Log.w("TAG", "signInWithCredential:failure", task.exception)
                     Toast.makeText(applicationContext,"OOPs something went wrong!!",Toast.LENGTH_SHORT).show()
                 }
@@ -118,9 +116,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
-        //  updateUI(currentUser);
         if(currentUser!=null){
             documentRef=db.collection("users").document(currentUser.uid)
             documentRef.get().addOnSuccessListener {
@@ -142,11 +138,9 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         finish()
-       // Firebase.auth.signOut()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-       // Firebase.auth.signOut()
     }
 }

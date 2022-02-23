@@ -27,11 +27,11 @@ class AdminAdapter (private val res: List<MyModel>,private val myClickListener: 
     }
 
     override fun getItemCount(): Int = res.size
-    override fun onBindViewHolder(holder: AdminAdapter.MyViewHolder, position: Int) =holder.bind(res[position],myClickListener)
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdminAdapter.MyViewHolder {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) =holder.bind(res[position],myClickListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.admin_item, parent, false)
-        return AdminAdapter.MyViewHolder(view)
+        return MyViewHolder(view)
     }
     interface MyClickListener{
         fun onClick(team1:String,team2:String,id:String?,time:String?,game:String?)

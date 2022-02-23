@@ -48,12 +48,7 @@ class TeamWinner : AppCompatActivity() ,MyTimeUpdate{
 
                     }
                 }
-                    /* for(dc:DocumentChange in it?.documentChanges!!){
-                    if(dc.type==DocumentChange.Type.ADDED){
-                        list.add(dc.document.toObject(MyModel::class.java))
-                    }
-                }*/
-                    // recyclerView.setHasFixedSize(true)
+
                     recyclerView.itemAnimator = DefaultItemAnimator()
                     recyclerView.adapter = MyAdapter(list, this)
                 }
@@ -84,12 +79,9 @@ class TeamWinner : AppCompatActivity() ,MyTimeUpdate{
         )
         team1_iv.setImageResource(a_team[team1]!!)
         team2_iv.setImageResource(a_team[team2]!!)
-        //time_tv.text=time
-
 
         handler.post(object : Runnable {
             override fun run() {
-                // Keep the postDelayed before the updateTime(), so when the event ends, the handler will stop too.
                 handler.postDelayed(this, 1000)
                 updateMyTime(time,btn1,btn2,time_tv)
 
@@ -97,9 +89,7 @@ class TeamWinner : AppCompatActivity() ,MyTimeUpdate{
 
             private fun updateMyTime(time: String, btn1: Button, btn2: Button, timeTv: TextView) {
                 val currentDate = Calendar.getInstance()
-                // Set Event Date
-             //   Toast.makeText(applicationContext,"${time.subSequence(0,1).toString()}",Toast.LENGTH_SHORT).show()
-                val eventDate = Calendar.getInstance()
+                   val eventDate = Calendar.getInstance()
                   eventDate[Calendar.YEAR] = time.subSequence(15,time.length).toString().toInt()
                 eventDate[Calendar.MONTH] =time.subSequence(12,14).toString().toInt()
                 eventDate[Calendar.DAY_OF_MONTH] = time.subSequence(9,11).toString().toInt()
@@ -117,13 +107,10 @@ class TeamWinner : AppCompatActivity() ,MyTimeUpdate{
                     if(days>=0 && hours>=0 && minutes>=0 && seconds>=0) {
                         time_tv.text= "${days}D ${hours}H ${minutes}M ${seconds}S"
                         val currentUser = auth.currentUser!!.displayName
-                       // Toast.makeText(applicationContext,"WinOrLoss$currentUser",Toast.LENGTH_SHORT).show()
-
 
                         var docRef:String?=null
 
                         btn1.setOnClickListener {
-                           // val choiceModel=ChoiceModel()
                             val user = hashMapOf(
                                 "category" to "winner team",
                                 "Choice" to team1,
@@ -131,7 +118,6 @@ class TeamWinner : AppCompatActivity() ,MyTimeUpdate{
                                  "prize" to "$0",
                                 "id" to id
                             )
-                          //  val choiceModel=ChoiceModel()
                             if(docRef!=null){
                                 db.collection("WinOrLoss$currentUser")
                                     .document(docRef!!)

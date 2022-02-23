@@ -16,9 +16,6 @@
             android:name=".TeamWinner"
             android:exported="false" />
         <activity
-            android:name=".MainOfTheMatch"
-            android:exported="false" />
-        <activity
             android:name=".Coin"
             android:exported="false" />
         <activity

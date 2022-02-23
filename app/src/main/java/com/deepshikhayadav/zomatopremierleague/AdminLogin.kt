@@ -98,18 +98,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
          auth = Firebase.auth
 
 
-   /* val winnerQuery= db.collection("winner team")
-        val response: FirestoreRecyclerOptions<MyModel> =
-            FirestoreRecyclerOptions.Builder<MyModel>()
-                .setQuery(winnerQuery, MyModel::class.java)
-                .build()*/
-
-    /*    val winnerQuery2= db.collection("Coin Toss")
-        val response2: FirestoreRecyclerOptions<MyModel> =
-            FirestoreRecyclerOptions.Builder<MyModel>()
-                .setQuery(winnerQuery2, MyModel::class.java)
-                .build()
-*/
 
         db.collection("winner team")
             .get()
@@ -184,7 +172,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
         )
 
         val game = arrayOf("Coin Toss", "Man of the match", "winner team")
-        //auth.currentUser
         setAdapter(spin, game,"game")
         setAdapter(team1, a_team1,"team1")
         setAdapter(team2, a_team2,"team2")
@@ -192,7 +179,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
     button.setOnClickListener {
             list.clear()
             mList.clear()
-           // val tm = user.text.toString()
             hashMap["time"] = myTime.toString()
             hashMap["winner"]=""
 
@@ -217,7 +203,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                             c.id = d.id
                             mList.add(c)
                         }
-                        // Toast.makeText(this,"button click"+ mList.size.toString(), Toast.LENGTH_SHORT).show()
 
                         myAdapter = AdminAdapter(mList, this)
                         recyclerView2.adapter = myAdapter
@@ -225,7 +210,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                             coin_tv.visibility=View.VISIBLE
                         }
                     }
-                    //  mList.clear()
 
                 }
                 .addOnFailureListener { e ->
@@ -255,7 +239,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                             c.id = d.id
                             mList.add(c)
                         }
-                        // Toast.makeText(this,"button click"+ mList.size.toString(), Toast.LENGTH_SHORT).show()
 
                         myAdapter = AdminAdapter(mList, this)
                         recyclerView.adapter = myAdapter
@@ -263,7 +246,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                             winner_tv.visibility=View.VISIBLE
                         }
                     }
-                    //  mList.clear()
 
                 }
                 .addOnFailureListener { e ->
@@ -276,18 +258,7 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
         mList.clear()
     }
 
- /*   class AdminViewHolder  (itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var team1_tv=itemView.findViewById<TextView>(R.id.team1)
-        var team2_tv= itemView.findViewById<TextView>(R.id.team2)
-        fun bind(myModel: MyModel,myClickListener: AdminAdapter.MyClickListener){
-            team1_tv.text=myModel.team1
-            team2_tv.text=myModel.team2
-            itemView.setOnClickListener{
-                myClickListener.onClick(myModel.team1.toString(),myModel.team2.toString(), id)
-            }
-        }
 
-    }*/
     private fun setAdapter(spin: Spinner, game: Array<String>,s:String) {
         if (spin != null) {
             val adapter = ArrayAdapter(this,
@@ -303,7 +274,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
-                    // write code to perform some action
                 }
             }
         }
@@ -424,12 +394,7 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
             }
         }
         tv_time.text=myTime.toString()
-       /* Toast.makeText(applicationContext,"  Year: $myYear\n" +
-                "            Month: $myMonth\n" +
-                "            Day: $myday\n" +
-                "            Hour: $myHour\n" +
-                "            Minute: $myMinute",Toast.LENGTH_SHORT).show()*/
-    }
+          }
 
     override fun onClick(team1: String, team2: String, myId:String?,time:String?,game:String?) {
         val a_team = arrayOf(
@@ -437,10 +402,8 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
             team2
         )
         var hashMap2=HashMap<String,String>()
-      //  Toast.makeText(this,"clicked",Toast.LENGTH_SHORT).show()
 
         val dialog = Dialog(this)
-        //dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.dialog_layout)
         dialog.window!!.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -459,11 +422,9 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                                             view: View, position: Int, id: Long) {
 
                     hashMap2["winner"] = a_team[position]
-                    // Toast.makeText(this@AdminLogin,"your choice  ${hashMap[game.toString()]}", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
-                    // write code to perform some action
                 }
             }
         }
@@ -472,7 +433,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
        }
         yesBtn.setOnClickListener {
             val myModel=MyModel("",team1,team2,time,game,hashMap2["winner"])
-           // Toast.makeText(applicationContext,c.id.toString(), Toast.LENGTH_SHORT).show()
            db.collection("winner team")
                 .document(myId!!).get().addOnCompleteListener {task->
                     if(task.isSuccessful){
@@ -529,15 +489,6 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
                 }
 
 
-
-            /* c.id?.let { it1 ->
-                 db.collection("Coin Toss")
-                     .document(it1)*/
-
-
-           // }
-           // Toast.makeText(this,hashMap2["winner"],Toast.LENGTH_SHORT).show()
-
             dialog.dismiss()
         }
 
@@ -546,12 +497,3 @@ class AdminLogin : AppCompatActivity(),DatePickerDialog.OnDateSetListener, TimeP
 
 
 }
-
-/*
-   db.collection("WinOrLossCoin$currentUser")
-                                .document(position.toString())
-                                .set(user)
-                                .addOnSuccessListener { Toast.makeText(this@Coin," Your choice $team1", Toast.LENGTH_SHORT).show() }
-                                .addOnFailureListener { e-> Toast.makeText(this@Coin," Error $e", Toast.LENGTH_SHORT).show() }
- */
-

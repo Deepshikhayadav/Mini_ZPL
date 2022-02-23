@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class HomeAdapter (private val res: List<ChoiceModel>) : RecyclerView.Adapter<HomeAdapter.MyViewHolder>() {
-    //private var r=res.values
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var team=itemView.findViewById<TextView>(R.id.teamName)
        var win= itemView.findViewById<TextView>(R.id.win)
@@ -23,10 +22,10 @@ class HomeAdapter (private val res: List<ChoiceModel>) : RecyclerView.Adapter<Ho
     }
 
     override fun getItemCount(): Int = res.size
-    override fun onBindViewHolder(holder: HomeAdapter.MyViewHolder, position: Int) =holder.bind(res[position])
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeAdapter.MyViewHolder {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) =holder.bind(res[position])
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.home_recycler, parent, false)
-        return HomeAdapter.MyViewHolder(view)
+        return MyViewHolder(view)
     }
 }

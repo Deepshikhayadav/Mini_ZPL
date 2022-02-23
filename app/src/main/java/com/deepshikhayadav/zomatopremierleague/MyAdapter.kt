@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter(private val res: List<MyModel>,private val myTimeUpdate: MyTimeUpdate) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
-//private var r=res.values
     companion object {
         var clicked:Boolean=false
     }
@@ -27,27 +26,6 @@ class MyAdapter(private val res: List<MyModel>,private val myTimeUpdate: MyTimeU
             val mTime=myModel.time.toString()
             val mTeam1=myModel.team1.toString()
             val mTeam2=myModel.team2.toString()
-           /*btn1.setOnClickListener {
-               if(clicked){
-                   btn1.isEnabled= true
-                   btn2.isEnabled= true
-               }
-               else{
-                   btn1.isEnabled= false
-                   btn2.isEnabled= false
-               }
-
-           }
-            btn2.setOnClickListener {
-                if(clicked){
-                    btn1.isEnabled= true
-                    btn2.isEnabled= true
-                }
-                else{
-                    btn1.isEnabled= false
-                    btn2.isEnabled= false
-                }
-            }*/
 
             myTimeUpdate.dataUpdate(mTime,mTeam1,mTeam2,time2,team1,team2,btn1,btn2,adapterPosition,myModel.id)
 
@@ -63,7 +41,7 @@ class MyAdapter(private val res: List<MyModel>,private val myTimeUpdate: MyTimeU
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) =holder.bind(res[position],myTimeUpdate)
 
-    override fun getItemCount(): Int = res.size /*r.size*/
+    override fun getItemCount(): Int = res.size
 }
 
 interface MyTimeUpdate{
